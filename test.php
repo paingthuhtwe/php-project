@@ -7,12 +7,22 @@
 
 include "vendor/autoload.php";
 
-use Helpers\Auth;
+// use Helpers\Auth;
 
-Auth::check();
+// Auth::check();
 // use Helpers\HTTP;
 
-// use Libs\Database\MySQL;
+use Libs\Database\MySQL;
+
+$mysql = new MySQL();
+
+$db = $mysql->connect();
+
+$result = $db->query("SELECT * FROM roles");
+
+echo "<pre>";
+print_r($result->fetchAll());
+
 // use Libs\Database\UsersTable;
 
 // Auth::check();
