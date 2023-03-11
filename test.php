@@ -7,8 +7,10 @@
 
 include "vendor/autoload.php";
 
-// use Helpers\Auth;
-use Helpers\HTTP;
+use Helpers\Auth;
+
+Auth::check();
+// use Helpers\HTTP;
 
 // use Libs\Database\MySQL;
 // use Libs\Database\UsersTable;
@@ -22,4 +24,4 @@ use Helpers\HTTP;
 // $table = new UsersTable;
 // $table->insert();
 
-HTTP::redirect("/index.php", "test=true");
+// HTTP::redirect("/index.php", "test=true");

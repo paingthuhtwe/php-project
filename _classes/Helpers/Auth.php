@@ -6,6 +6,11 @@ class Auth
 {
     public static function check()
     {
-        echo "Auth Check <br>";
+        session_start();
+        if ($_SESSION['user']) {
+            return $_SESSION['user'];
+        }
+
+        HTTP::redirect("/index.php", "auth=false");
     }
 }
