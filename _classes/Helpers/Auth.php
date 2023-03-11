@@ -2,8 +2,10 @@
 
 namespace Helpers;
 
-class Auth {
-    static function check() {
+class Auth
+{
+    public static function check()
+    {
         echo "Auth Check <br>";
     }
 }

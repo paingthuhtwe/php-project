@@ -7,16 +7,19 @@
 
 include "vendor/autoload.php";
 
-use Helpers\Auth;
+// use Helpers\Auth;
 use Helpers\HTTP;
-use Libs\Database\MySQL;
-use Libs\Database\UsersTable;
 
-Auth::check();
-HTTP::redirect();
+// use Libs\Database\MySQL;
+// use Libs\Database\UsersTable;
 
-$db = new MySQL;
-$db->connect();
+// Auth::check();
+// HTTP::redirect();
 
-$table = new UsersTable;
-$table->insert();
+// $db = new MySQL;
+// $db->connect();
+
+// $table = new UsersTable;
+// $table->insert();
+
+HTTP::redirect("/index.php", "test=true");
