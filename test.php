@@ -5,25 +5,19 @@
 // include "_classes/Libs/Database/MySQL.php";
 // include "_classes/Libs/Database/UsersTable.php";
 
-include "vendor/autoload.php";
-
 // use Helpers\Auth;
 
 // Auth::check();
 // use Helpers\HTTP;
 
-use Libs\Database\MySQL;
+// $mysql = new MySQL();
 
-$mysql = new MySQL();
+// $db = $mysql->connect();
 
-$db = $mysql->connect();
+// $result = $db->query("SELECT * FROM roles");
 
-$result = $db->query("SELECT * FROM roles");
-
-echo "<pre>";
-print_r($result->fetchAll());
-
-// use Libs\Database\UsersTable;
+// echo "<pre>";
+// print_r($result->fetchAll());
 
 // Auth::check();
 // HTTP::redirect();
@@ -35,3 +29,21 @@ print_r($result->fetchAll());
 // $table->insert();
 
 // HTTP::redirect("/index.php", "test=true");
+
+include "vendor/autoload.php";
+use Libs\Database\MySQL;
+use Libs\Database\UsersTable;
+use Faker\Factory as Faker;
+
+$faker = Faker::create();
+$table = new UsersTable(new MySQL());
+$table->insert([
+    "name" => $faker->name,
+    "email" => $faker->email,
+    "phone" => $faker->phoneNumber,
+    "address" => $faker->address,
+    "password" => "password",
+]);
+
+echo "<pre>";
+print_r($table->getAll());
