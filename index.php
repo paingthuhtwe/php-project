@@ -17,6 +17,11 @@
             Incorrect email or password!
         </div>
         <?php endif ?>
+        <?php if(isset($_GET['register'])): ?>
+        <div class="alert alert-success">
+            Register successful, Please Lgoin Here!
+        </div>
+        <?php endif ?>
         <form action="_actions/login.php" method="post">
             <div class="mb-2">
                 <input type="email" class="form-control" name="email" placeholder="Email" required>
