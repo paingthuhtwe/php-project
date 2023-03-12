@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-light">
-    <div class="container text-center mt-5 py-5 px-3 bg-white border rounded shadow" style="max-width: 320px;">
+    <div class="container text-center mt-5 py-4 px-3 bg-white border rounded shadow" style="max-width: 320px;">
         <h1 class="h3 mb-3">Register</h1>
         <form action="_actions/create.php" method="post">
             <div class="mb-2">

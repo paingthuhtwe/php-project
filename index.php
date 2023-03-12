@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-light">
-    <div class="container text-center mt-5 py-5 px-3 bg-white border rounded shadow" style="max-width: 320px;">
+    <div class="container text-center mt-5 py-4 px-3 bg-white border rounded shadow" style="max-width: 320px;">
         <h1 class="h3 mb-3">Login</h1>
         <?php if(isset($_GET['incorrect'])): ?>
         <div class="alert alert-warning">
@@ -19,7 +19,7 @@
         <?php endif ?>
         <?php if(isset($_GET['register'])): ?>
         <div class="alert alert-success">
-            Register successful, Please Lgoin Here!
+            Register successful, please Lgoin!
         </div>
         <?php endif ?>
         <form action="_actions/login.php" method="post">
