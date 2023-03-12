@@ -37,13 +37,13 @@ use Faker\Factory as Faker;
 
 $faker = Faker::create();
 $table = new UsersTable(new MySQL());
-$table->insert([
-    "name" => $faker->name,
-    "email" => $faker->email,
-    "phone" => $faker->phoneNumber,
-    "address" => $faker->address,
-    "password" => "password",
-]);
+// $table->insert([
+//     "name" => $faker->name,
+//     "email" => $faker->email,
+//     "phone" => $faker->phoneNumber,
+//     "address" => $faker->address,
+//     "password" => "password",
+// ]);
 
 echo "<pre>";
 print_r($table->getAll());
